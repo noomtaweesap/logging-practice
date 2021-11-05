@@ -1,0 +1,10 @@
+2021-11-05 21:33:09,842 root WARNING: Failed, User test can't login.
+2021-11-05 21:33:09,842 root Level 35: User test can't login.
+2021-11-05 21:33:09,842 root ERROR: Error message.
+2021-11-05 21:33:09,842 root CRITICAL: Critical message alert.
+2021-11-05 21:33:09,842 foo DEBUG: Debug message.
+2021-11-05 21:33:09,842 foo INFO: User test login Successfully.
+2021-11-05 21:33:09,842 foo WARNING: Failed, User test can't login.
+2021-11-05 21:33:09,842 foo Level 35: User test can't login.
+2021-11-05 21:33:09,842 foo ERROR: Error message.
+2021-11-05 21:33:09,842 foo CRITICAL: Critical message alert.

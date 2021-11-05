@@ -53,17 +53,15 @@ def simple_config():
 
 def my_config():
     """Write your own logging configuration."""
-    # TODO write your own logging configuration
-    #      specify a log file, threshold level, format, and append mode
-    pass
+    FORMAT = '%(asctime)s %(name)s %(levelname)s: %(message)s'
+    logging.basicConfig(format=FORMAT, level=logging.WARN,
+                        filename="logging_message.log", filemode='w')
 
 
 if __name__ == "__main__":
-    #
-    # TODO Configure logging using one of these choices:
 
     # 1. Call basicConfig with the default settings
-    logging.basicConfig()
+    # logging.basicConfig()
 
     # 2. Call simple_config to set the format of log messages.
     #    Comment out the above call (#1) to basicConfig for this.
@@ -72,14 +70,14 @@ if __name__ == "__main__":
     # 3. my_config() write your own logging configuration as
     #    described in the assignment. 
     #    Comment out the above calls to simple_config and basicConfig.
-    # my_config() 
+    my_config()
 
     # Log some messages to the root logger using different logging levels.
     logger = logging.getLogger()
-    print("Logging to ", str(logger))
+
     logging_test(logger)
-
-
-    # TODO create a named logger, set a a custom log threshold,
-    #       and call logging_test again with your named logger.
-
+    my_logger = logging.getLogger("foo")
+    my_logger.setLevel(logging.DEBUG)  # log everything
+    logging_test(my_logger)
+    print("Logging to ", str(logger))
+    print("Logging to ", str(my_logger))
