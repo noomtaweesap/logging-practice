@@ -9,22 +9,24 @@ For details, see: https://docs.python.org/3/library/logging.html
 """
 import logging
 
+
 def logging_test(logger):
     """Log messages using each of the standard logging levels 
        plus 1 custom log level.
     """ 
-    # TODO write a log message that uses each of these log levels.
-    #  Your log message should be an example of the sort of information 
-    #  you would log at that level:
-    #
+
     # debug
+    logger.debug('Debug message.')
     # info
+    logger.info("User test login Successfully.")
     # warning
-    # level = logging.WARN + 5 (custom log level between WARN and ERROR)
+    logger.warning("Failed, User test can't login.")
+    level = logging.WARN + 5  # (custom log level between WARN and ERROR)
+    logger.log(level, "User test can't login.")
     # error
+    logger.error("Error message.")
     # critical or fatal
-    level = logging.WARN + 5  # custom log level
-    print("You forgot to write logging_test")
+    logger.critical("Critical message alert.")
 
 
 def simple_config():
